@@ -5,6 +5,8 @@ var PortalSchema = new mongoose.Schema({
     teamid: String,
     teamname: String,
     channelid: String,
+    channelname: String,
+    creator: {name: String, id: String},
     history: [
         {
             message: String,
@@ -13,7 +15,10 @@ var PortalSchema = new mongoose.Schema({
             senderavatar: String,
             isfromslack: Boolean
         }
-    ]
-})
+    ],
+    users: [],
+    muted: Boolean,
+    expire: { type: Date, expire: 172800, default: new Date() }
+});
 
 module.exports = mongoose.model("Portal", PortalSchema);

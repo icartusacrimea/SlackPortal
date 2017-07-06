@@ -1,31 +1,186 @@
+body, html {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
 body {
-    background: rgba(137, 155, 190, 1);
-    font-size: 18px;
+    background: #222125;
+    font-size: 1.4em;
+    font-family: 'Space Mono', monospace;
 }
-
-.chatbody {
-    /*display: block;*/
-    position: relative;
-    background: #e8effd;
-    height: 400px;
-    margin-top: 30px;
-    border-radius: 1em;
+.sp_title {
+  color: #9a3d2e;
+  font-size: 1.4em;
+  margin-top: 1.35em;
+  text-align: right;
+  float: right;
+  padding: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.68);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon 1.5s ease-in-out infinite alternate;
+  animation: neon 1.5s ease-in-out infinite alternate;
 }
-
-.chatinput {
-    margin-top: 30px;
-    background: #e8effd;
-    height: 100px;
-    border-radius: 1em;
-    padding: 5px;
+.title {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.68);
 }
-
-#userinput {
-    width: 90%;
-    height: 90%;
+.titleline1, .titleline2, .titleline3 {
+    font-size: .9em;
+    margin: 0;
+    padding: 1px;
+    color: white;
+    letter-spacing: -1px;
+}
+.colortitle {
+    color: #4fafd8;
+}
+.userinput {
     display: block;
+    padding: 10px;
+    /*width: 100%;*/
+    height: 3.6em;
+    background: #222125;
+    color: #faa415;
+    /*border-radius: .3em;*/
+    font-size: 1.5em;
+    margin-top: 10%;
+}
+input#username {
+    display: block;
+    background: #222125;
+    color: #faa415;
+    border:none;
+    height: 100%;
+    width: 50%;
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#save {
+    display: block;
+    padding: 6px;
+    border-radius: .3em;
+    background: #1d6789;
+    color: #faa415;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+    box-shadow: 2px 1px 6px #000;
+}
+#save:hover {
+    color: #1d6789;
+    background: #faa415;
+}
+.chatbody {
+    display: none;
+    position: relative;
+    background: #3E3D48;
+    height: 77vh;
+    margin-top: 20px;
+    border-radius: 1em;
+    padding: 5px 20px;
+    border: 4px solid #9a3d2e;
+    box-shadow: 2px 1px 6px #000;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d17734;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 36px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+.avattext {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+}
+.avatar {
+    width: 54px;
+    height: 54px;
+    border-radius: 15%;
+    padding-right: 3px;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 4px;
+}
+.flexnone {
+    width: 80%;
+}
+h3 {
+    font-size: 1.25em;
+    color: #faa415;
+    padding: 0;
+    margin-top: 0;
+    letter-spacing: -1.5px;
+}
+p {
+    font-size: 1.1em;
+    color: white;
+    font-family: Arial;
+    font-size: 1.1em;
+    padding: 0;
+    padding-bottom: 0;
+}
+.inputform {
+    display: none;
+    padding: 10px;
+    width: 100%;
+    height: 8.4vh;
+    color: #faa415;
+    background: #2f2627;
+    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
     border-radius: .3em;
-    font-size: 17px;
+    font-size: 1.1em;
+    border: 3px solid #4fafd8;
+    font-family: Arial;
+    box-shadow: 2px 1px 6px #000;
+}
+input#message{
+    border: none;
+    height: 100%;
+    width: 100%;
+    color: white;
+    background: #2f2627;
+}
+/* Media Queries */
+@media only screen and (max-width: 500px) {
+    .sp_title {
+        display: none;
+    }
 }
